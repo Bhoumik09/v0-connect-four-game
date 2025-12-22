@@ -40,40 +40,40 @@ A professional real-time multiplayer Connect Four game built with Node.js, Socke
 Create `.env` files in both root and server directories:
 
 **Root `.env`:**
-```env
+\`\`\`env
 NEXT_PUBLIC_SOCKET_URL=http://localhost:3001
 NEXT_PUBLIC_API_URL=http://localhost:3001
-```
+\`\`\`
 
 **Server `.env`:**
-```env
+\`\`\`env
 PORT=3001
 CLIENT_URL=http://localhost:3000
 DATABASE_URL=postgresql://user:password@localhost:5432/connectfour
 KAFKA_BROKER=localhost:9092
-```
+\`\`\`
 
 ### Installation
 
 1. **Install dependencies:**
-```bash
+\`\`\`bash
 # Install frontend dependencies
 npm install
 
 # Install server dependencies
 cd server
 npm install
-```
+\`\`\`
 
 2. **Setup Database:**
 Run the SQL script to initialize tables:
-```bash
+\`\`\`bash
 psql -d connectfour -f scripts/01-init-database.sql
-```
+\`\`\`
 
 3. **Start the servers:**
 
-```bash
+\`\`\`bash
 # Terminal 1: Start backend
 cd server
 npm run dev
@@ -84,7 +84,7 @@ npm run dev
 # Terminal 3 (Optional): Start Kafka consumer
 cd server
 npx tsx kafka-consumer.ts
-```
+\`\`\`
 
 4. **Open the game:**
 Navigate to `http://localhost:3000`
@@ -117,10 +117,10 @@ The bot uses a heuristic approach:
 
 ### Docker Deployment
 
-```bash
+\`\`\`bash
 # Build and run with docker-compose
 docker-compose up --build
-```
+\`\`\`
 
 ### Vercel Deployment
 
@@ -151,7 +151,7 @@ docker-compose up --build
 
 ## Project Structure
 
-```
+\`\`\`
 ├── app/                    # Next.js app directory
 │   ├── page.tsx           # Main game page
 │   ├── layout.tsx         # Root layout
@@ -167,7 +167,7 @@ docker-compose up --build
 │   └── kafka-consumer.ts # Analytics service
 └── scripts/              # Database scripts
     └── 01-init-database.sql
-```
+\`\`\`
 
 ## Performance Optimizations
 
